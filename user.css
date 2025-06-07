@@ -1,0 +1,137 @@
+main {
+    padding: 2rem;  /* Espaciado interno del contenido principal */
+    font-family: 'Anuphan', sans-serif;
+    color: #3F332D;
+}
+
+h2 {
+    font-family: 'Junge', serif;
+    color: #3F332D;
+    margin-top: 2rem;
+}
+
+.purchases-columns {
+    display: grid;      /* Usa grid layout para organizar las compras */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    /* Columnas responsivas de al menos 300px */
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Detalles de cada producto comprado */
+.purchase-item {
+    break-inside: avoid;    /* Evita que el ítem se corte entre columnas */
+    margin-bottom: 0.2rem;  /* Margen inferior entre ítems */
+    background: #dfd5cd76;
+    border-radius: 12px;    /* Bordes redondeados */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}   
+
+.purchase-item img {
+    width: 90px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;         /* Evita que la imagen se reduzca */
+}
+
+.purchase-details {
+    font-size: 0.95rem;
+    color: #3F332D;
+}
+
+.purchase-group {
+    border-radius: 8px;     /* Bordes redondeados del grupo de compra */
+    margin-bottom: 2rem;    /* Espacio inferior entre grupos */
+    margin-top: 2rem;       /* Espacio superior */
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+.purchase-group h3 {
+    margin-top: 0;          /* Elimina el margen superior del título */
+    color: #333;
+}
+
+
+.detail-cup-name {
+    font-family: 'Inclusive Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.detail-info-cup {
+    font-family: 'Anuphan', sans-serif; 
+}
+
+.logout-button {
+    display: block;         /* Hace que el botón sea un bloque independiente */
+    margin: 3rem auto 0;    /* Margen arriba y centrado horizontalmente */
+    padding: 0.8rem 2rem;   /* Espaciado interno */
+    background-color: #BA9D7E;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;        /* Cursor cambia a puntero al pasar por encima */
+    font-family: 'Anuphan', sans-serif;
+    border: none;        
+}
+
+.logout-button:hover {
+    background-color: #a78e6e;
+}
+
+.details-user {
+    margin-top: 15px;
+}
+
+.details-user p {
+    display: flex;
+    gap: 5px;
+    margin: 0.2rem 0;
+    font-family: 'Anuphan', sans-serif;
+    color: #3F332D;
+}
+
+.details-user .label {
+    min-width: 100px;
+    font-weight: bold;  
+}
+
+.details-user .value {
+    flex: 1;                    /* El valor ocupa el espacio restante */
+    word-wrap: break-word;      /* Permite cortes de línea naturales */
+    overflow-wrap: break-word;  /* Alternativa para navegadores modernos */
+    word-break: break-word;     /* Rompe la palabra si es necesario */
+}
+
+.user-layout {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;        /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Toda la seccion de informacion de el usuario */
+.user-box {
+    flex: 1 1 250px;        /* Ocupa espacio flexible mínimo de 250px */
+    background-color: #f8f6f3;
+    padding: 1.5rem;
+    border: 1px solid #e0dcd7;
+    border-radius: 12px;
+    font-family: 'Anuphan', sans-serif;
+    color: #3F332D;
+    max-width: 360px;
+}
+
+/* Toda la seccion de Mis compras */
+.purchases-box {
+    flex: 3 1 600px;        /* Caja más grande que la de usuario */
+    background-color: #f8f6f3;
+    padding: 1.5rem;        /* Espaciado interno */
+    border: 1px solid #e0dcd7;
+    border-radius: 12px;
+    font-family: 'Anuphan', sans-serif;
+    color: #3F332D;
+}
+

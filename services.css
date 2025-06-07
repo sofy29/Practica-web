@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&family=Instrument+Sans&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
+.background-services {
+    position: absolute;             /* Se superpone al contenedor padre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;                   /* Cubre todo el contenedor */
+    object-fit: cover;              /* Rellena sin deformar */
+    object-position: center 60%;    /* Centra imagen con énfasis vertical más abajo */  
+    z-index: 0;                     /* Al fondo de la pila */
+}
+
+.figure-services {
+    position: relative;         /* Para posicionar contenido hijo de forma absoluta */
+    min-height: 46vh;           /* Altura mínima del contenedor */
+    display: flex;              
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 40px 20px;         /* Espaciado interior */
+    text-align: center;         /* Centra el texto */
+}
+
+.text-services {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #FFFFFF;
+    font-weight: 300;           /* Peso de fuente ligero */
+    font-size: 3rem;
+    position: absolute;
+    z-index: 1;                 /* Se sitúa encima de la imagen */
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.benefits-section {
+    display: flex;
+    justify-content: center;    /* Centra los elementos horizontalmente */  
+    align-items: flex-start;    /* Alinea elementos arriba */
+    gap: 50px;
+    padding: 60px 40px;
+    background-color: #ffffff;
+    flex-wrap: wrap;            /* Permite que se distribuyan en varias líneas */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.benefit {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefit-icon {
+    height: 55px;
+}
+
+.benefit p {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(63, 51, 45, 0.7); /* Marrón con opacidad del 70% */
+    line-height: 1.4;               /* Espaciado entre líneas */
+}
+
+.history-section {
+    display: flex;
+    background-color: rgba(143, 129, 119, 0.38); /* Marrón claro con 38% de opacidad */
+}
+
+.history-content {
+    max-width: 1000px;
+    text-align: center;     /* Centra texto */
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.history-title {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2rem;            /* Tamaño del título */
+    color: #3F332D;
+    margin-bottom: 20px;        /* Espaciado inferior */
+}
+
+.history-text {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;          /* Tamaño del texto */
+    color: #3F332D;
+    margin-bottom: 40px; 
+    line-height: 1.6;           /* Espaciado entre líneas */
+}
+
+.history-gallery {
+    display: grid;          /* Muestra imágenes en grilla */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));    /* Se adapta al tamaño de pantalla */
+    gap: 30px;
+    justify-items: center;  /* Centra cada ítem dentro de su celda */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.history-item {
+    display: flex;
+    flex-direction: column;     /* Imagen arriba, texto debajo */
+    align-items: center;        /* Centrado horizontal */
+    max-width: 220px;
+    width: 100%;
+}
+
+.history-item img {
+    width: 100%;
+    object-fit: cover;      /* Corta o rellena la imagen manteniendo proporciones */
+    aspect-ratio: 1 / 1;    /* Imagen cuadrada */
+}
+
+.history-item p {
+    font-family: 'Anuphan', sans-serif;
+    font-size: 0.9rem;
+    color: #3F332D;
+    margin-top: 10px;
+}
+
+.historyImage {
+    flex: 0 0 auto;         /* No se estira ni se reduce */
+    padding-left: 0;        /* Sin espacio interno izquierdo */
+    margin-left: 0;         /* Sin margen izquierdo */
+    display: flex;
+    align-items: center;    /* Centra verticalmente el contenido dentro del contenedor */
+}
+
+.historyImage img {
+    width: 520px;
+    height: 520px;
+    object-fit: cover;      /* La imagen se recorta para cubrir el área sin deformarse */
+    display: block;         /* Elimina espacio inferior de imágenes inline */
+    border-radius: 0;       /* Bordes rectos, sin esquinas redondeadas */
+}
+
+.gallery-section {
+    background-color: white;
+    padding: 60px 40px;
+}
+
+.gallery-text-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.separator {
+    display: block;     /* Elemento en bloque */
+    width: 300px;
+    height: 2px;
+    background-color: #3F332D;
+    margin: 40px auto;
+}
+
+.gallery-text {
+    font-family: 'Kurale', serif;
+    font-size: 1.1rem;
+    color: #3F332D;
+    margin: 10px 0;     /* Margen vertical entre párrafos */
+    line-height: 1.6;   /* Altura de línea para mejorar legibilidad */
+}
+
+.gallery-img {
+    display: grid;                              /* Usa CSS Grid para disposición */
+    grid-template-columns: repeat(6, 200px);    /* 6 columnas fijas de 200px cada una */
+    grid-template-rows: repeat(3, 200px);       /* 3 filas fijas de 200px cada una */
+    gap: 5px;
+    padding: 5px;                               /* Espacio interior del grid */
+    justify-content: center;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Se recorta para llenar el contenedor sin deformarse */
+}
+
+.img1 {
+    grid-column: 1 / 4;     /* Ocupa desde la columna 1 hasta la 3 incluida */
+    grid-row: 1;            /* Está en la fila 1 */
+}
+  
+.img2 {
+    grid-column: 4;         /* Columna 4 */
+    grid-row: 1;            /* Fila 1 */
+}
+  
+.img3 {
+    grid-column: 5;         /* Columna 5 */
+    grid-row: 1 / 4;        /* Abarca desde la fila 1 hasta la 3 incluida */
+}
+
+.img4 {
+    grid-column: 6;         /* Columna 6 */
+    grid-row: 1;            /* Fila 1 */
+}
+
+.img5 {
+    grid-column: 6;         /* Columna 6 */
+    grid-row: 2;            /* Fila 2 */
+}
+
+.img6 {
+    grid-column: 6;         /* Columna 6 */
+    grid-row: 3;            /* Fila 3 */
+}
+
+.img7 {
+    grid-column: 1 / 3;     /* Ocupa columnas 1 y 2 */
+    grid-row: 2 / 4;        /* Ocupa filas 2 y 3 */
+}
+
+.img8 {
+    grid-column: 3 / 5;     /* Ocupa columnas 3 y 4 */
+    grid-row: 2 / 4;        /* Ocupa filas 2 y 3 */
+}
+
+/*Seccion de la parte de la historia*/
+@media (max-width: 900px) {
+    .history-text {
+        font-size: 1rem;    /* Reduce el tamaño de fuente del texto principal */
+        padding: 0 10px;    /* Agrega un pequeño espacio a los lados */
+    }
+
+    .history-title {
+        font-size: 1.6rem;
+    }
+
+    .history-gallery {
+        gap: 20px;          /* Reduce la separación entre elementos */
+    }
+
+    .history-item p {
+        font-size: 0.85rem; /* Reduce el tamaño de los textos de cada ítem */
+    }
+
+    .history-section {
+        flex-direction: column;     /* Cambia de fila a columna la disposición */
+        align-items: center;        /* Centra el contenido en la nueva dirección */
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .historyImage img {
+        width: 100%;
+        max-width: 400px;       /* No excede los 400px */
+        height: auto;           /* Mantiene proporción de la imagen */
+    }
+
+    .history-content {
+        margin: 20px 0 0 0;     /* Agrega margen superior */
+        padding: 0 20px;
+        text-align: center;     /* Centra el texto */
+    }
+}
+
+/*Parte inicial de la pagina*/
+@media (max-width: 968px) {
+    .text-services {
+        font-size: 1.8rem;      /* Reduce el tamaño del texto principal */
+        margin-bottom: 100px;
+    }
+
+    .figure-services {
+        min-height: 35vh;       /* Reduce la altura mínima del contenedor principal */
+    }
+}
+
+/*Parte de los beneficios*/
+@media (max-width: 968px) {
+    .benefit p {
+        font-size: 0.85rem;     /* Reduce el tamaño de fuente del párrafo */
+    }
+
+    .benefit-icon {
+        height: 45px;
+    }
+}
+
+/*Parte de la galeria de las imagenes*/
+@media (max-width: 968px) {
+    .gallery-img {
+        display: flex;              /* Cambia de grid a layout flexible */
+        flex-direction: column;     /* Apila las imágenes en columna */
+        gap: 20px;
+        padding: 10px 20px;         /* Añade espacio interior */
+        align-items: center;
+    }
+
+    .gallery-img img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;      /* Asegura que la imagen llene sin deformarse */
+    }
+}

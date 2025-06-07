@@ -1,0 +1,353 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+/* Contenedor principal con imagen de fondo y contenido centrado */
+.figure-index {
+    position: relative;         /* Necesario para posicionar el fondo y el contenido dentro */
+    width: 100%;                
+    height: 100dvh;             /* Altura igual al alto de la ventana del dispositivo */
+    display: flex;              /* Activa flexbox para organizar su contenido */
+    flex-direction: column;     
+    justify-content: center;    
+    overflow: hidden;           /* Oculta lo que sobresalga del área */
+}
+
+/* Contenedor de textos dentro de la sección principal */
+.figure-index hgroup {
+    margin-top: -100px;         /* Mueve el grupo hacia arriba*/
+    position: relative;  
+    z-index: 1;                 /* Se asegura de estar encima del fondo */          
+    margin-left: 80px;          /* Separación desde el borde izquierdo */
+    display: flex;
+    flex-direction: column;     /* Organiza los textos y el botón uno debajo de otro */
+    gap: 40px;                  
+    width: fit-content;         /* Solo ocupa el ancho necesario */
+    padding: 20px;              
+    border-radius: 10px;        /* Bordes redondeados para el bloque */
+}
+
+/* Título principal */
+figure h1 {
+    font-size: 80px;        /* Título principal muy grande */
+    font-weight: bold;      
+    max-width: 685px;       /* Limita el ancho para que no se extienda demasiado */
+    line-height: 1;         /* Espaciado vertical entre líneas más compacto */
+}
+
+/* Subtítulo */
+figure h2 {
+    font-size: 25px;        
+    max-width: 680px;
+    line-height: 1.2;
+    font-weight: normal;    /* No en negrita */
+}
+
+/* Imagen de fondo */
+.background {
+    position: absolute;     /* Se posiciona detrás del contenido */
+    top: 0;
+    left: 0;
+    width: 100%;            /* Cubre todo el ancho del contenedor */
+    height: 100%;           /* Cubre toda la altura también */
+    object-fit: cover;      /* Recorta la imagen sin perder proporción */
+    z-index: 0;             /* Se asegura de estar detrás del texto */
+}
+
+/* Estilo general para elementos dentro de .figure-index */
+.figure-element{    
+    font-family: 'Instrument Sans', sans-serif;
+    color: #3B2E27;
+}
+
+/* Botón de "Comprar" en la sección principal */
+.button-buy {
+    display: inline-block;          /* Comportamiento tipo botón */
+    width: 149px;
+    height: 46px;
+    background-color: #D9D9D9;    /* Fondo gris claro */  
+    font-size: 20px;
+    font-weight: bold;
+    color: #59473D;    
+    text-decoration: none;          /* Sin subrayado */     
+    text-align: center;
+    line-height: 46px;              /* Centrado vertical del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;                /* Manito al pasar encima */
+    transition: background 0.3s ease-in-out;    /* Animación de hover */
+    margin-bottom: 100px;
+    margin-right: 7%;
+    align-self: flex-end;           /* Alinea el botón a la derecha */
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+/* Contenedor de los widgets (iconos con texto explicativo) */
+.widgets-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 100px 80px;
+    list-style: none;       /* Elimina los puntos de lista */
+    flex-wrap: nowrap;      /* No se permite que bajen de línea */
+    padding: 0;
+}
+
+/* Contenedor de texto dentro de cada widget */
+.text-container{
+    display: flex;              
+    flex-direction: column;     /* Organiza en columna */
+    margin-left: 30px;          /* Espacio entre imagen y texto */
+}
+
+/* Estilo general de cada widget */
+.widget {
+    width: 340px;
+    height: 104px;
+    background-color: #E8E2DC;      /* Fondo claro */
+    border-radius: 10px;              /* Bordes redondeados */
+    display: flex;                    
+    flex-direction: row;              /* Imagen a la izquierda, texto a la derecha */
+    justify-content: center;          /* Centrado horizontal */
+    align-items: center;              /* Centrado vertical */
+    font-family: 'Instrument Sans', sans-serif;
+    text-align: center;               /* Alineación centrada para el texto */
+}
+
+/* Imagen dentro del widget */
+.widget img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Icono de mano */
+.hand-icon {
+    width: 50px;
+    height: 45px;
+}
+
+/* Icono de monedero */
+.wallet-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Icono de taza */
+.cup-icon {
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Icono de soporte */
+.support-icon {
+    width: 80px;
+    height: 60px;
+}
+
+/* Icono de camión */
+.truck-icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    right: -12px;
+}
+
+/* Título del widget */
+.widget-title {
+    font-size: 17px;
+    font-weight: bold;     /* Negrita */
+    color: #3B2E27;
+}
+
+/* Subtítulo del widget */
+.widget-subtitle {
+    font-size: 13px;
+    font-weight: normal;    /* Peso normal */
+    color: #3B2E27;
+    margin-top: 5px;        /* Separación desde el título */
+}
+
+/* Título para la sección de productos */
+.products-title {
+    font-size: clamp(35px, 6vw, 59px);      /* Escala adaptable al ancho de pantalla */
+    font-weight: bold;                      /* Negrita */
+    font-family: 'Karma', serif;
+    text-align: center;                   
+    margin: 150px auto 0 auto;              /* Margen superior amplio */
+    margin-right: auto;                     /* Corrige el centrado en algunos navegadores */
+    color: #3B2E27;
+}
+
+/* Contenedor de productos en formato cuadrícula */
+.squares-container {
+    display: flex;         
+    flex-wrap: wrap;        /* Permite varias filas */
+    gap: 90px;             
+    justify-content: center;    /* Centrado horizontal */
+    margin-top: 120px;
+    list-style: none;       /* Sin viñetas */
+    padding: 0 40px; 
+}
+
+/* Cada producto destacado */
+.square {
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(to bottom, white, #E1DBD6);     /* Degradado vertical */
+    display: flex;
+    align-items: center;        /* Centrado vertical */
+    justify-content: center;    /* Centrado horizontal */
+    object-fit: contain;        /* Escala sin recortar */
+
+}
+
+/* Contenedor de información del producto */
+.product-info {
+    display: flex;
+    justify-content: space-between;     /* Espacio entre nombre y precio */
+    width: 100%;
+    max-width: 450px;                   /* Límite de ancho */
+    font-family: 'Inclusive Sans', sans-serif;
+    font-size: 23px;
+    color: #3F332D;
+    margin-top: 1px;                    /* Separación mínima */
+}
+
+/* Nombre del producto */
+.product-name {
+    text-align: left;       /* Alineado a la izquierda */
+    flex-grow: 1;           /* Ocupar espacio restante */
+}
+
+/* Precio del producto */
+.product-price {
+    text-align: right;      /* Alineado a la derecha */
+    flex-grow: 1;           /* Ocupar espacio restante */
+    opacity: 0.8;           /* Más tenue visualmente */
+}
+
+/* Línea separadora visual */
+.separator {
+    width: 90%;             
+    max-width: 600px;       
+    height: 3px;            /* Grosor de línea */
+    background-color: #705D54;
+    border: none;           /* Sin borde externo */
+    margin: 10px auto 0 auto;    /* Centrado horizontal */
+}
+
+/* Sección del mapa de ubicación */
+.map-section {
+    margin: 150px auto;     /* Espacio vertical y centrado */
+    padding: 0 60px;        /* Relleno horizontal */
+    text-align: center;   
+    font-family: 'Instrument Sans', sans-serif;
+    color: #3B2E27;
+}
+
+/* Título dentro del mapa */
+.map-title {
+    font-size: clamp(35px, 6vw, 59px);  /* Escalable según ancho */
+    font-weight: bold;
+    font-family: 'Karma', serif;
+    text-align: center;
+    margin: 150px auto 0 auto;          
+    margin-right: auto;                 
+    display: block;                     /* Elemento en bloque */
+    color: #3B2E27;
+    width: fit-content;                 /* Ajuste automático al contenido */
+}
+
+/* Subtítulo del mapa */
+.map-subtitle {
+    font-size: 25px;
+    width: fit-content;             /* Ajusta al contenido */
+    margin: 30px auto 40px auto;    /* Margen superior e inferior centrado */
+    color: #3F332D;
+    opacity: 0.9;                   /* Ligero desvanecido */
+}
+
+/* Estilo del iframe que muestra el mapa */
+.show-mapa {
+    border-radius: 12px;        /* Bordes redondeados */                   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+    max-width: 100%;
+}
+
+/* RESPONSIVE: Sección de productos más vendidas */
+@media (max-width: 768px) {
+    .square {
+        width: 275px;       /* Reduce el ancho de cada tarjeta */
+        height: 275px;      /* Reduce el alto de cada tarjeta */
+    }
+
+    .product-info {
+        font-size: 20px;    /* Disminuye tamaño del texto */
+    }
+
+    .products-title {
+        font-size: 30px;    /* Reduce el tamaño del título */
+    }
+
+    .separator {
+        width: 70%;         /* Más estrecho en móviles */
+        height: 2px;        /* Línea más delgada */
+    }
+}
+
+/* RESPONSIVE: Ajuste de widgets en pantallas medianas */
+@media (max-width: 1400px) {
+
+    .widgets-container {
+        flex-wrap: wrap;            /* Permite que se apilen */
+        gap: 10px;                  /* Menor separación */
+        justify-content: center;   
+        margin: 50px 40px;          /* Menor margen */
+    }
+
+    .widget {
+        width: 100%;            /* Ocupar todo el ancho disponible */
+        max-width: 320px;       /* Límite de ancho */
+        margin-bottom: 20px;    /* Espacio entre widgets */
+    }
+
+    .widget-title {
+        font-size: 16px;        /* Texto más pequeño */
+    }
+
+    .widget-subtitle {
+        font-size: 12px;        /* Texto más pequeño */
+    }
+}
+
+/* RESPONSIVE: Ajustes en la sección inicial (hero) */
+@media (max-width: 768px) {
+
+    figure h1 {
+        font-size: 40px;   
+        max-width: 90vw;    /* Hasta el 90% del ancho de la pantalla */
+    }
+
+    figure h2 {
+        font-size: 18px;   
+        max-width: 90vw;  
+    }
+
+    .button-buy {
+        font-size: 16px;   
+        width: 120px;       /* Botón más estrecho */
+        height: 40px;       /* Botón más bajo */
+        line-height: 40px;  
+    }
+
+    .figure-index {
+        align-items: start; /* Alinea contenido al inicio */
+    }
+
+    .ffigure-index hgroup {
+        margin-top: 0px;    /* Elimina el margen superior */
+    }
+}
+

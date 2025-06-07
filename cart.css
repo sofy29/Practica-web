@@ -1,0 +1,162 @@
+
+h1 {
+    font-family: 'Junge', cursive;
+    margin-left: 2rem;  /* Espaciado a la izquierda */
+    margin-top: 2rem;   /* Espaciado arriba */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;    /* Permite que los elementos se acomoden en varias filas si es necesario */
+    padding: 1rem;      /* Espaciado interno */
+    gap: 1rem;          /* Espacio entre los elementos hijos */
+}
+
+/* La parte izquierda de la página */
+.cart-left {
+    flex: 1.5;          /* Ocupa una porción mayor del espacio disponible */
+    display: flex;      /* Flexbox en columna */     
+    flex-direction: column;         /* Apila elementos verticalmente */
+    justify-content: flex-start;    /* Alineación al principio del contenedor */
+    margin-bottom: 40px;
+}
+
+.cart-left h1 {
+    margin-bottom: 30px;
+}
+
+/* Se usa en el JS, como se ve los productos añadidos en el carrito */
+.cart-item {
+    display: flex;
+    align-items: center;                /* Centra verticalmente */
+    justify-content: space-between;     /* Espacio entre elementos */
+    padding: 1rem 0;
+    border-bottom: 1.5px solid #BA9D7E; /* Línea divisoria inferior */
+    max-width: 790px;   
+    margin-left: 2rem;
+}
+
+/* Relacioando a la info de la taza */
+.cart-details {
+    flex: 1;                /* Ocupa todo el espacio disponible */
+    padding-left: 1rem;     /* Separación con la imagen */
+}
+
+.name-and-price {
+    display: flex;
+    justify-content: space-between; /* Separación máxima entre nombre y precio */
+    align-items: center;            /* Alineación vertical centrada */
+    width: 50%;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 18px;
+    color: #3F332D;
+    margin-bottom: 0.5rem;          /* Espacio inferior */
+}
+
+.cart-details p {
+    margin: 0.3rem 0;
+}
+
+/* La parte derecha de la pagina */
+.cart-right {
+    flex: 1;                /* Toma menos espacio que .cart-left */
+    min-width: 280px;
+    padding: 4rem;
+    border-left: 1.5px solid #BA9D7E;   /* Línea divisoria izquierda */
+}
+
+.cart-right h2 {
+    font-family: 'Junge', sans-serif;
+    margin-bottom: 35px;
+}
+
+#subtotal #total{
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+.title {
+    font-family: 'Junge', sans-serif;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between; /* Separación máxima entre elementos */
+    margin: 1.3rem 0;
+}
+
+/* Linea que separa */
+.total-line {
+    border-top: 1.5px solid #BA9D7E;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Boton de pagar */
+.pay-button {
+    display: inline-block;          /* Botón en línea con formato de bloque */
+    text-align: center;             /* Centrado del texto */
+    text-decoration: none;          /* Elimina subrayado */
+    background-color: white;
+    color: #3F332D;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border: 1px solid #3F332D;
+    border-radius: 6px;
+    cursor: pointer;                /* Cambia el cursor al pasar el ratón */
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;  /* Transición suave */
+    font-family: 'Junge', sans-serif;
+}
+
+/* Cuando el raton pasa por encima del boton */
+.pay-button:hover {
+    background-color: #3F332D;
+    color: white;
+}
+
+/* Mensaje de alerta en caso de que no haya ningun producto en el carrito */
+.pay-warning {
+    color: #b22222;           /* Rojo fuerte */
+    font-size: 1rem;
+    margin-top: 10px;
+    display: none;            /* Oculto por defecto */
+    text-align: center;
+}
+
+.trash-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 1rem;
+    cursor: pointer;    /* Cursor en forma de mano */
+}
+
+img.product-image {
+    width: 100px;
+    height: auto;
+}
+
+#cartContainer{
+    display: flex;
+    flex-direction: column;     /* Apilado vertical */
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .cart-right {
+        border-left: none;      /* Elimina la línea divisoria en pantallas pequeñas */
+        padding: 3rem 1rem;     /* Ajuste de padding */
+    }
+
+    main {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+    }
+
+    .cart-left, .cart-right {
+        width: 100%;
+    }
+
+    .cart-item {
+        margin-left: 1.2rem;
+    }
+}
