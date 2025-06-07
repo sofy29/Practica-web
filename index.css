@@ -18,7 +18,7 @@
 .figure-index hgroup {
     margin-top: -100px;         /* Mueve el grupo hacia arriba*/
     position: relative;  
-    z-index: 1;                 /* Se asegura de estar encima del fondo */          
+    z-index: 1;                 /* Se asegura de estar encima de los elementos */          
     margin-left: 80px;          /* Separación desde el borde izquierdo */
     display: flex;
     flex-direction: column;     /* Organiza los textos y el botón uno debajo de otro */
