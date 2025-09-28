@@ -1,0 +1,176 @@
+/* Importa la fuente 'Krub' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krub&display=swap');
+
+/* Texto de detalles (descripción, materiales, etc.) */
+.detail-text {
+    font-family: 'Krub', sans-serif;
+    color: #3F332D;
+    margin-top: 10px;
+    line-height: 1.5;       /* Altura de línea para mejor legibilidad */
+    font-size: 16px;
+    text-align: justify;    /* Justifica el texto */
+    width: 100%;
+}
+
+/* Layout principal del detalle de producto */
+.product-detail-layout {
+    display: flex;
+    justify-content: center;    /* Centrado horizontal */
+    align-items: flex-start;    /* Alinea arriba verticalmente */
+    gap: 100px;
+    margin-top: 100px;
+}
+
+/* Imagen principal del producto */
+.main-image {
+    width: 600px;
+    height: auto;   /* Altura automática */
+    background: linear-gradient(to bottom, white, #E1DBD6); /* Fondo con degradado */
+    padding: 30px;
+}
+
+/* Contenedor de imágenes del producto */
+.product-detail-images {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen principal arriba y las miniaturas debajo */
+    align-items: center;
+}
+
+/* Lista de miniaturas */
+.thumbnail-list {
+    display: flex;
+    width: 600px;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;   /* Sin viñetas */
+    padding: 0;
+}
+
+/* Miniatura individual */
+.thumbnail {
+    width: 193px;
+    height: 193px;
+    background: linear-gradient(to bottom, white, #E1DBD6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;    /* Contener la imagen sin recortarla */
+    padding: 10px;
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño total */
+}   
+
+/* Imagen dentro de la miniatura */
+.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;    /* Ajusta sin recortar */
+}
+
+/* Información del producto */
+.product-detail-info {
+    font-family: 'Instrument Sans', sans-serif;
+    color: #3F332D;
+    display: flex;
+    flex-direction: column; /* Elementos apilados verticalmente */
+    gap: 20px;
+}
+
+/* Sección de título y precio */
+.product-title-price {
+    display: flex;
+    justify-content: space-between;     /* Título a la izquierda, precio a la derecha */
+    align-items: center;
+    font-family: 'Junge', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #3F332D;
+}
+
+/* Stock disponible */
+.product-stock {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #8f6e4abb;
+}
+
+/* Botón para añadir al carrito */
+.add-btn {
+    font-family: 'Lunasima', sans-serif;
+    font-size: 1rem;
+    padding: 12px 24px; /* Tamaño del botón */
+    min-width: 180px;
+    border-radius: 6px;
+    margin-left: 30px;
+    background-color: #BA9D7E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-title, .product-price {
+    font-size: 1.8rem;
+}
+
+.product-price {
+    opacity: 0.8;
+}
+
+/* Sección de botones de cantidad */
+.quantity-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botones + y - */
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid #3F332D;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Cantidad actual mostrada */
+.quantity-display {
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+
+/* Contenedor de filtros desplegables */
+.filters {
+    width: auto;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.2rem; 
+    padding-top: 40px;
+}
+
+/* Grupo individual de filtro (como descripción o materiales) */
+.filter-group {
+    border-top: 1px solid #BA9D7E;
+    padding: 30px 0;
+    width: 500px;
+}
+
+/* Título del filtro (con icono de despliegue) */
+.filter-group h3 {
+    display: flex;
+    justify-content: space-between; /* Texto a la izquierda, icono a la derecha */
+    color: #5E4F40;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Icono de despliegue (el "+" o "−") */
+.filter-toggle {
+    width: 35px;
+    height: 35px;
+    opacity: 0.7;
+    cursor: pointer;
+    color: #76634E;
+}

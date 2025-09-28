@@ -1,0 +1,169 @@
+.pay-container {
+    margin-top: 45px;
+    display: flex;      /* Muestra los formularios y el resumen uno al lado del otro */
+    gap: 3rem;
+}
+
+.form-container {
+    flex: 3;            /* Ocupa más espacio que la parte derecha */
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.form-container form {
+    margin-bottom: 55px;
+}
+
+.cart-right {
+    flex: 2;    /* Ocupa menos espacio que el formulario */
+    border-left: 1px solid #BA9D7E;
+    padding-left: 3rem;
+    margin-right: 35px;
+}
+
+h2 {
+    font-family: 'Inclusive Sans', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: #3F332D;
+}
+
+.fileText {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 17px;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+input {
+    width: 55%;
+    padding: 12px;
+    border: none;
+    border-bottom: 1.3px solid #BA9D7E; /* Línea inferior marrón claro */
+    font-size: 1rem;
+    outline: none;                        /* Quita el borde azul al hacer clic */
+    color: #AE957B;
+}
+
+input::placeholder {
+    color: #A78F73;
+    opacity: 0.8;
+}
+
+.btn-pay {
+    width: 280px;
+    padding: 12px 32px;
+    background: white;
+    color: #3F332D;
+    border: 1px solid #3F332D;
+    font-weight: bold;
+    cursor: pointer;            /* Cambia el cursor a mano al pasar por encima */
+    border-radius: 6px;
+    margin-top: 2rem;
+    text-decoration: none;      /* Elimina subrayado si es un enlace */
+    display: inline-block;      /* Se comporta como bloque en línea para respetar ancho/alto */
+    text-align: center;         /* Centra el texto horizontalmente */
+    transition: background-color 0.3s ease, color 0.3s ease;        /* Animación suave para hover */
+}
+
+.btn-pay:hover {
+    background-color: #3F332D;
+    color: white;
+}
+
+.back-link {
+    color: #3F332D;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.3rem 0;
+}
+
+.title {
+    font-family: 'Junge', sans-serif;
+}
+
+.cart-container {
+    margin-top: 45px;
+    margin-right: 70px;
+}
+
+.total-line {
+    border-top: 1.5px solid #BA9D7E;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.cup-data{
+    display: flex; 
+    flex-direction: column; 
+    flex: 1;            
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+.cup-data p {
+    margin-bottom: 10px;
+}
+
+.button-pay-back {
+    display: flex;
+    align-items: end;
+    gap: 40px;
+}
+
+main {
+    margin-bottom: 65px;
+}
+
+@media (max-width: 868px) {
+    .pay-container {
+        flex-direction: column;     /* Cambia de layout horizontal a vertical */ 
+        gap: 2rem;
+    }
+
+    .form-container {
+        margin: 0 auto;             /* Centra horizontalmente el formulario */
+        width: 90%;
+    }
+
+    .cart-right {
+        border-left: none;          /* Elimina el borde izquierdo */
+        padding-left: 0;            /* Elimina el padding izquierdo */
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .cart-container {
+        margin-right: 0;            /* Elimina el margen derecho para ajustarse al ancho */
+    }
+
+    .fileText {
+        flex-direction: column;     /* Apila los inputs verticalmente */
+        gap: 1rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .button-pay-back {
+        flex-direction: column;     /* Apila los botones verticalmente */
+        align-items: center;        /* Centra los botones horizontalmente */
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .back-link {
+        text-align: center;         /* Centra el texto del enlace */
+    }
+
+    main {
+        margin-bottom: 45px;
+    }
+}

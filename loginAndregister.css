@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box; /* Hace que padding y borde no aumenten el tamaño total */
+}
+
+body {
+    margin: 0;
+    font-family: 'Instrument Sans', sans-serif;
+    color: #3B2E27;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;  /* Ocupa toda la altura de la ventana */
+    width: 100%;
+}
+
+section {
+    flex: 1;
+}
+
+/* Estilo para la parte izquierda con imagen */
+.left {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;   /* Oculta el contenido que desborde */
+}
+
+/* Imagen de fondo en el lado izquierdo */
+.login-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* La imagen se ajusta sin distorsión */
+    display: block;     /* Elimina espacios blancos por ser inline por defecto */
+}
+
+/* Parte derecha con el formulario */
+.right {
+    display: flex;
+    align-items: flex-start;    /* Alinea el contenido al inicio verticalmente */
+    justify-content: center;    /* Centra horizontalmente */
+    height: 100%;
+    padding: 60px;
+}
+
+/* Título principal del formulario */
+h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: 'Instrument Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/* Etiquetas dentro del formulario */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Inputs de texto y contraseña */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Botón de enviar del formulario */
+form input[type="submit"] {
+    background-color: #3B2E27;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Mensaje de error en rojo */
+span {
+    color: red;
+    margin-left: 45px;
+}
+
+/* Contenedor de la info del formulario */
+.infoForm {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Formulario de contacto (login) */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    font-family: 'Lunasima', sans-serif;
+    margin-left: 40px;
+}
+
+/* Estilo para el título dentro del formulario */
+.contactForm h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+.inputField {
+    font-family: 'Lunasima', sans-serif;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border: 1.3px solid #000000;
+    border-radius: 10px;
+    color: #3F332D;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+/* Estilo para enlace de volver */
+.volver-link {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #3B2E27;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Lunasima', sans-serif;
+    width: fit-content;
+}
+
+/* Contenedor de acciones del login */
+.login-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Subtítulo decorativo del login */
+.login-subtitle {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.3rem;
+    color: #D4BFAA;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Botón de enviar */
+.submit-button {
+    background-color: #BA9D7E;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-family: 'Lunasima', sans-serif;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Contenedor de los botones login y register */
+.login-and-register {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+/* Enlace a registro */
+.button-register, .button-login{
+    color: #3F332D;
+    font-size: 16px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 868px) {
+    .login-container {
+        flex-direction: column;     /* Apila las secciones verticalmente en lugar de mostrarlas en línea */
+        height: auto;
+    }
+
+    .left {
+        display: none;      /* Oculta la sección izquierda (imagen de fondo) en pantallas pequeñas */
+    }
+
+    .login-img {
+        height: 100%;
+        object-fit: cover;  /* Escala la imagen para cubrir sin deformarse */
+    }   
+
+    .right {
+        width: 100%;
+        padding: 30px 20px;
+        align-items: center;    /* Centra los elementos verticalmente */
+    }
+
+    .infoForm {
+        margin-left: 0;
+        align-items: center;    /* Centra los elementos dentro de esta sección */
+    }
+
+    .contactForm {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    .contactForm h1 {
+        font-size: 1.8rem;
+        text-align: center;     /* Centra el texto del título */
+    }
+
+    .inputField {
+        height: 45px;
+        font-size: 0.95rem;
+    }
+
+    .login-and-register {
+        flex-direction: column; /* Apila los botones verticalmente */
+        gap: 1rem;
+        align-items: center;    /* Centra los botones */
+    }
+
+    .submit-button,
+    .button-register 
+    .button-login {
+        width: 100%;
+    }
+
+    span {
+        margin-left: 0;         /* Elimina margen izquierdo para mensajes de error */
+        text-align: center;     /* Centra el texto */
+        display: block;         /* Se comporta como un bloque para forzar el salto de línea */
+    }
+}
